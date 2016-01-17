@@ -1,0 +1,16 @@
+doctype html
+html(lang="en")
+    head
+        title= pageTitle
+        link(href='bibsbn.css' rel='stylesheet')
+        script(src='js/lib/require.js' data-main='js/main' defer)
+    body
+        div
+            input(id='isbn_text' maxlength=15 autofocus value='3625171570')
+            button(id='isbn_button' form='isbn_text' class='button_disabled' disabled) Search
+        div
+            textarea(id='bibtex_text', rows=10 cols= 50)
+
+
+
+

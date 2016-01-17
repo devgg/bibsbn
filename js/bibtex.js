@@ -199,7 +199,6 @@ define(['jquery'],
                                 callFunctionIfPresent(book, 'year', year);
                                 callFunctionIfPresent(book, 'city', address);
                                 callFunctionIfPresent(book, 'ed', edition);
-
                                 bibtexEntries.push(bibtexEntry);
                             }, this);
                         }

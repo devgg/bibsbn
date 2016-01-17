@@ -2,23 +2,36 @@
 
 define(['jquery', 'bibtex', 'isbn'],
     function($, bibtex, isbn) {
+
         $("#isbn_button").click(function() {
-            var isbn_input = $('#isbn_text').val();
-            console.log(isbn_input);
-            bibtex.executeQuery(isbn_input).then(function() {
-                $('#bibtex_text').val(bibtex.getResult());
-            });
+            executeQuery();
         });
 
-        $('#isbn_text').on('keyup change', function() {
+        $('#isbn_text').on('keyup change', function(event) {
+            if (event.keyCode == 13) {
+                executeQuery();
+            } else {
+                var isbnButton = $('#isbn_button');
+                var isbnTextElement = $('#isbn_text');
+                var isIsbn = isbn.validate(isbnTextElement.val());
 
-            var isbnButton = $('#isbn_button');
-            var isbnText = $('#isbn_text');
-            var isIsbn = isbn.validate(isbnText.val());
-
-            isbnButton.prop('disabled', !isIsbn);
-            isbnButton.prop('class', isIsbn ? 'button_enabled' : 'button_disabled');
-            isbnText.prop('class', isIsbn ? 'text_correct' : 'text_incorrect');
+                isbnButton.prop('disabled', !isIsbn);
+                isbnButton.prop('class', isIsbn ? 'button_enabled' : 'button_disabled');
+                isbnTextElement.prop('class', isIsbn ? 'text_correct' : 'text_incorrect');
+            }
         });
+
+        function executeQuery() {
+            var isbnText = $('#isbn_text').val();
+            if (isbn.validate(isbnText)) {
+                bibtex.executeQuery(isbnText).then(function() {
+                    var bibtexText = $('#bibtex_text');
+                    bibtexText.val(bibtex.getResult());
+                    bibtexText.focus();
+                });
+            }
+        }
+
+
     }
 );

@@ -11,23 +11,90 @@ body {
 #main {
   align-self: center;
 }
-.button_disabled {
-  background: #d13f19;
-}
-.button_enabled {
-  background: #0074d9;
-}
-#isbn_button {
-  width: button_width;
-  -webkit-border-radius: 6;
-  -moz-border-radius: 6;
-  border-radius: 6px;
-  color: #0a5200;
-  font-size: 20px;
-  padding: 7px 20px 7px 20px;
-  border: solid #0a5200 1px;
-  cursor: pointer;
-}
 #bibtex_text {
   resize: none;
+  margin-top: 15px;
+  font-size: large;
+}
+#input_container {
+  display: flex;
+  justify-content: space-between;
+}
+/*
+#isbn_text
+  font-size large*/
+#isbn_button:disabled {
+  background: #ccc;
+  border-color: #b8b8b8;
+  opacity: 0.5;
+  cursor: default;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+#isbn_button:disabled:hover {
+  background: #ccc;
+  background-position: 0 0;
+}
+#isbn_button:disabled:active {
+  background: #ccc;
+  box-shadow: none;
+  border-color: #b8b8b8;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+#isbn_button:enabled {
+  color: #3d9970;
+}
+form .field-error {
+  color: #d13f19;
+}
+form .field-error input {
+  color: #d13f19;
+  border-color: #d13f19;
+}
+form .field-error input:focus {
+  box-shadow: 0 0 5px rgba(209,63,25,0.7);
+  border: 1px solid #b15239;
+  outline: none;
+}
+#isbn_button {
+  height: 100%;
+  background: #fff;
+}
+#isbn_button:focus {
+  outline: 0;
+}
+input[type=text] textarea {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  outline: none;
+  padding: 3px 0 3px 3px;
+  margin: 5px 1px 3px 0;
+  border-width: 1px;
+  border-style: solid;
+}
+textarea {
+  border-color: #ddd;
+}
+textarea:focus {
+  box-shadow: 0 0 5px #aaa;
+  border-color: #aaa;
+}
+.text_correct {
+  color: #01ff70;
+  border-color: #01ff70;
+}
+.text_correct:focus {
+  box-shadow: 0 0 5px #01ff70;
+  border-color: #01ff70;
+}
+.text_incorrect {
+  color: #ddd;
+  border-color: #ddd;
+}
+.text_incorrect:focus {
+  color: #d13f19;
+  box-shadow: 0 0 5px #d13f19;
+  border-color: #d13f19;
 }

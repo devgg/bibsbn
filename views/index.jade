@@ -10,8 +10,8 @@ html(lang="en")
     body
         div(id='main')
             h1 BibSBN - ISBN to BibTeX converter
-            div
-                input(id='isbn_text' size=17 maxlength=17 autofocus value='3625171570')
+            div(id='input_container')
+                input(id='isbn_text'  type='text' size=17 maxlength=17 autofocus value='3625171570' class='text_incorrect')
                 button(id='isbn_button' form='isbn_text' class='button_disabled' disabled) Search
             div
                 textarea(id='bibtex_text', rows=15 cols= 75 wrap='hard')

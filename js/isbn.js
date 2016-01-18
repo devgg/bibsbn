@@ -3,7 +3,6 @@
 define(
     function() {
         function validate10(isbn) {
-            console.log(isbn);
             if (isbn.length != 10) {
                 return false;
             }

@@ -1,3 +1,5 @@
+color = #0A5200
+
 *
   margin 0
   padding 0
@@ -5,20 +7,31 @@
 body
   height 100vh
   width 100vw
+  display flex
+  justify-content: center;
 
 
 #main
-  text-align center
-  height 20%
-  margin: auto;
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
+  align-self: center;
+
 
 .button_disabled
-    background red
+  background red
 
 .button_enabled
   background blue
+
+#isbn_button
+  width button_width
+  -webkit-border-radius 6;
+  -moz-border-radius 6;
+  border-radius 6px;
+  color color;
+  font-size 20px;
+  padding 7px 20px 7px 20px;
+  border solid color 1px;
+  cursor pointer
+  //hover-glow(#97BF90, 10px)
 
 #bibtex_text
   resize none

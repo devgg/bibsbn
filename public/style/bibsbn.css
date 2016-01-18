@@ -5,22 +5,28 @@
 body {
   height: 100vh;
   width: 100vw;
+  display: flex;
+  justify-content: center;
 }
 #main {
-  text-align: center;
-  height: 20%;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  align-self: center;
 }
 .button_disabled {
   background: #d13f19;
 }
 .button_enabled {
   background: #0074d9;
+}
+#isbn_button {
+  width: button_width;
+  -webkit-border-radius: 6;
+  -moz-border-radius: 6;
+  border-radius: 6px;
+  color: #0a5200;
+  font-size: 20px;
+  padding: 7px 20px 7px 20px;
+  border: solid #0a5200 1px;
+  cursor: pointer;
 }
 #bibtex_text {
   resize: none;

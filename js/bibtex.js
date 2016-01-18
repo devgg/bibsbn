@@ -66,6 +66,8 @@ define(['jquery'],
             resultEntries[position] = bibtexEntries;
             if (numberResults == apis.length) {
                 resultEntries = [].concat.apply([], resultEntries);
+                console.log(resultEntries);
+                console.log(mergeResultArrays());
                 result = objectToBibtex(mergeResultArrays());
             }
         }
@@ -81,10 +83,10 @@ define(['jquery'],
 
         function objectToBibtex(object) {
             var bibtex = '@book{' + currentIsbn.replace(/\s/g, '') + ',\n';
-            bibtex += Object.keys(object).map(function(property) {
-                return '\t' + property + ' = ' + '{' + object[property] + '}';
-            }).join(',\n');
-            bibtex += ',\n\tisbn = {' + currentIsbn + '}';
+            for (var property in object) {
+                bibtex += '\t' + property + ' = ' + '{' + object[property] + '},\n';
+            }
+            bibtex += '\tisbn = {' + currentIsbn + '}';
             return bibtex + '\n}';
         }
 
@@ -235,3 +237,10 @@ define(['jquery'],
         };
     }
 );
+
+
+/*
+ @book{3809434469,
+ ,
+ isbn = {3809434469}
+ }*/

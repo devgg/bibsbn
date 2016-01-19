@@ -122,6 +122,7 @@ define(['jquery'],
                                 bibtexEntries.push(bibtexEntry);
                             }, this);
                         }
+                        $('#status_google').prop('class', 'status_ready');
                         handleResult(bibtexEntries, position);
                     }
                 })
@@ -160,11 +161,13 @@ define(['jquery'],
                             callFunctionIfPresent(book, 'publish_date', year);
                             bibtexEntries.push(bibtexEntry);
                         }
+                        $('#status_open_library').prop('class', 'status_ready');
                         handleResult(bibtexEntries, position);
                     }
                 })
             }
         );
+
 
         var worldcatApi = new Api(
             'WorldCat',
@@ -204,6 +207,7 @@ define(['jquery'],
                                 bibtexEntries.push(bibtexEntry);
                             }, this);
                         }
+                        $('#status_worldcat').prop('class', 'status_ready');
                         handleResult(bibtexEntries, position);
                     }
                 })

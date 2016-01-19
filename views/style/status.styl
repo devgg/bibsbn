@@ -1,0 +1,31 @@
+palette2_red = #D43F3F
+palette2_green = #6A9A1F
+palette2_blue = #00ACE9
+
+#status_container
+  display flex
+  justify-content space-between
+
+
+.status
+  text-align center
+  border-style solid
+  border-color $silver
+  font-size large
+  color $silver
+  border-radius 0
+  border-width 1px
+  height 33px
+  line-height 33px
+  flex 0.3
+
+.status_loading
+  @extend .status
+  color palette2_red
+  border-color palette2_red
+
+
+.status_ready
+  @extend .status
+  color palette2_green
+  border-color palette2_green

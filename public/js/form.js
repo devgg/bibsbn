@@ -21,6 +21,9 @@ define(['jquery', 'bibtex', 'isbn'],
             if (isbn.validate(isbnText)) {
                 $('#isbn_button').css('cursor', 'progress');
                 $(document.body).css('cursor', 'progress');
+                $('#status_google').prop('class', 'status_loading');
+                $('#status_open_library').prop('class', 'status_loading');
+                $('#status_worldcat').prop('class', 'status_loading');
                 bibtex.executeQuery(isbnText).then(function() {
                     var bibtexText = $('#bibtex_text');
                     bibtexText.val(bibtex.getResult());

@@ -11,10 +11,14 @@ html(lang="en")
         div(id='main')
             h1 BibSBN - ISBN to BibTeX converter
             div(id='input_container')
-                input(id='isbn_text'  type='text' size=17 maxlength=17 autofocus value='3625171570' class='text_incorrect')
+                input(id='isbn_text'  type='text' size=23 maxlength=17 autofocus value='3625171570' class='text_incorrect')
                 button(id='isbn_button' form='isbn_text' class='button_disabled' disabled) Search
             div
                 textarea(id='bibtex_text', rows=15 cols= 75 wrap='hard')
+            div(id='status_container')
+                div(id='status_google' class='status') Google Books
+                div(id='status_open_library' class='status') Open Library
+                div(id='status_worldcat' class='status')  WorldCat
 
 
 

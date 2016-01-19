@@ -1,3 +1,9 @@
+@import 'status.styl'
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat)
+@import url(https://fonts.googleapis.com/css?family=Open\+Sans);
+
+
 color = $olive
 
 
@@ -10,8 +16,10 @@ palette2_green = #6A9A1F
 palette2_blue = #00ACE9
 
 *
+  font-family 'Montserrat', sans-serif
   margin 0
   padding 0
+
 
 body
   height 100vh
@@ -24,8 +32,10 @@ body
 
 #bibtex_text
   resize none
-  margin-top 15px
-  font-size large
+  margin 15px 0
+  font-size medium
+  font-weight semi-bold
+  font-family 'Open Sans', sans-serif
 
 #input_container
   display flex

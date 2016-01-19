@@ -8,11 +8,15 @@ palette2_blue = #00ACE9
 
 
 .status
+  -webkit-transition all 0.30s ease-in-out
+  -moz-transition all 0.30s ease-in-out
+  -ms-transition all 0.30s ease-in-out
+  -o-transition all 0.30s ease-in-out
   text-align center
   border-style solid
-  border-color $silver
+  border-color: white
   font-size large
-  color $silver
+  color white
   border-radius 0
   border-width 1px
   height 33px
@@ -21,11 +25,9 @@ palette2_blue = #00ACE9
 
 .status_loading
   @extend .status
-  color palette2_red
-  border-color palette2_red
+  background white
+  color fallback_color
 
 
 .status_ready
   @extend .status
-  color palette2_green
-  border-color palette2_green

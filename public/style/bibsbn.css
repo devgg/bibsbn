@@ -5,11 +5,15 @@
 .status,
 .status_loading,
 .status_ready {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   text-align: center;
   border-style: solid;
-  border-color: #ddd;
+  border-color: #fff;
   font-size: large;
-  color: #ddd;
+  color: #fff;
   border-radius: 0;
   border-width: 1px;
   height: 33px;
@@ -17,12 +21,8 @@
   flex: 0.3;
 }
 .status_loading {
-  color: #d43f3f;
-  border-color: #d43f3f;
-}
-.status_ready {
-  color: #6a9a1f;
-  border-color: #6a9a1f;
+  background: #fff;
+  color: #7474bf;
 }
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
@@ -36,9 +36,29 @@ body {
   width: 100vw;
   display: flex;
   justify-content: center;
+  background: 0;
+  background: #c21500; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #c21500, #ffc500); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #c21500, #ffc500);
+  background: #a73737; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #a73737, #7a2828); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #a73737, #7a2828); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #f857a6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #f857a6, #ff5858); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #f857a6, #ff5858); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #4b6cb7; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #4b6cb7, #182848); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #4b6cb7, #182848); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #e43a15; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #e43a15, #e65245); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #e43a15, #e65245); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #7474bf; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #7474bf, #348ac7); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #7474bf, #348ac7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 #main {
   align-self: center;
+  background: 0 0;
 }
 #bibtex_text {
   resize: none;
@@ -88,32 +108,27 @@ form .field-error input:focus {
   color: #fff;
   border-width: 1px;
   border-radius: 0;
-  box-shadow: 0 0 5px #aaa;
+  background: 0 0;
 }
 #isbn_button:disabled {
-  border-color: #aaa;
-  color: #aaa;
-  background: #fff;
+  border-color: #fff;
+  color: #fff;
   cursor: not-allowed;
 }
 #isbn_button:enabled {
-  border-color: #6a9a1f;
+  box-shadow: 0 0 7px #fff;
+  border-color: #fff;
   background: #fff;
-  color: #6a9a1f;
-}
-#isbn_button:hover:disabled {
-  border-color: #d43f3f;
-  background: #fff;
+  cursor: pointer;
+  color: #7474bf;
 }
 #isbn_button:hover:enabled {
-  border-color: #6a9a1f;
-  background: #6a9a1f;
+  background: 0 0;
+  border-color: #fff;
   color: #fff;
-  cursor: pointer;
 }
 #isbn_button:active {
   border-color: #6a9a1f;
-  background: #fff;
   color: #6a9a1f;
 }
 #isbn_button:focus {
@@ -129,28 +144,11 @@ textarea {
   padding: 5px 0 5px 3px;
   border-width: 1px;
   border-style: solid;
+  background: 0 0;
+  color: #fff;
+  border-color: #fff;
 }
-textarea {
-  border-color: #ddd;
-  color: #001f3f;
-}
+input[type=text]:focus,
 textarea:focus {
-  box-shadow: 0 0 5px #aaa;
-}
-.text_correct {
-  color: #6a9a1f;
-  border-color: #6a9a1f;
-}
-.text_correct:focus {
-  box-shadow: 0 0 5px #6a9a1f;
-  border-color: #6a9a1f;
-}
-.text_incorrect {
-  color: #d43f3f;
-  border-color: #ddd;
-}
-.text_incorrect:focus {
-  color: #d43f3f;
-  border-color: #d43f3f;
-  box-shadow: 0 0 5px #d43f3f;
+  box-shadow: 0 0 7px #fff;
 }

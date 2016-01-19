@@ -1,3 +1,5 @@
+fallback_color = #7474BF
+
 @import 'status.styl'
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat)
@@ -15,10 +17,13 @@ palette2_red = #D43F3F
 palette2_green = #6A9A1F
 palette2_blue = #00ACE9
 
+
+
 *
   font-family 'Montserrat', sans-serif
   margin 0
   padding 0
+
 
 
 body
@@ -26,9 +31,46 @@ body
   width 100vw
   display flex
   justify-content center
+  background 0
+  background: #c21500; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #c21500 , #ffc500); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #c21500 , #ffc500);
+
+
+  background: #a73737; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #a73737 , #7a2828); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #a73737 , #7a2828); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+  background: #f857a6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #f857a6 , #ff5858); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #f857a6 , #ff5858); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+  background: #4b6cb7; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #4b6cb7 , #182848); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #4b6cb7 , #182848); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+  background: #e43a15; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #e43a15 , #e65245); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #e43a15 , #e65245); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+  background: #7474BF; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #7474BF , #348AC7); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #7474BF , #348AC7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
 
 #main
   align-self center
+  background 0 0
 
 #bibtex_text
   resize none
@@ -68,37 +110,32 @@ form .field-error
   border-style solid
   font-size large
   color white
-
   border-width 1px
   border-radius 0
-  box-shadow: 0 0 5px $gray
+  background 0 0
 
 
 #isbn_button:disabled
-  border-color $gray
-  color $gray
-  background white
+  border-color $white
+  color $white
   cursor not-allowed
 
 #isbn_button:enabled
-  border-color palette2_green
-  background white
-  color palette2_green
+  box-shadow: 0 0 7px $white
+  border-color white
+  background  white
+  cursor pointer
+  color fallback_color
 
 
-#isbn_button:hover:disabled
-  border-color palette2_red
-  background white
 
 #isbn_button:hover:enabled
-  border-color palette2_green
-  background palette2_green
+  background 0 0
+  border-color white
   color white
-  cursor pointer
 
 #isbn_button:active
   border-color palette2_green
-  background white
   color palette2_green
 
 
@@ -120,33 +157,17 @@ input[type=text], textarea
   padding 5px 0 5px 3px
   border-width 1px
   border-style solid
+  background 0 0
+  color white
+  border-color white
 
 
-textarea
-  border-color $silver
-  color $navy
 
-textarea:focus {
-  box-shadow: 0 0 5px $gray
-}
 
-color_correct = $lime
-color_incorrect = $orange
 
-.text_correct
-  color palette2_green
-  border-color palette2_green
 
-.text_correct:focus
-  box-shadow: 0 0 5px palette2_green
-  border-color palette2_green
 
-.text_incorrect
-  color palette2_red
-  border-color $silver
-  //border-bottom-color $red
 
-.text_incorrect:focus
-  color palette2_red
-  border-color palette2_red
-  box-shadow: 0 0 5px palette2_red
+input[type=text]:focus, textarea:focus
+  box-shadow: 0 0 7px white
+

@@ -19,13 +19,19 @@ define(['jquery', 'bibtex', 'isbn'],
             setCss();
             var isbnText = $('#isbn_text').val();
             if (isbn.validate(isbnText)) {
+                $('#isbn_button').css('cursor', 'progress');
+                $(document.body).css('cursor', 'progress');
                 bibtex.executeQuery(isbnText).then(function() {
                     var bibtexText = $('#bibtex_text');
                     bibtexText.val(bibtex.getResult());
                     bibtexText.focus();
+                    $('#isbn_button').css('cursor', 'pointer');
+                    $(document.body).css('cursor', 'auto');
                 });
             }
         }
+
+
 
         function setCss() {
             var isbnButton = $('#isbn_button');

@@ -1,4 +1,4 @@
 .DS_Store
 .idea
 *.html
-public/style/bibsbn.css
+public/style/*

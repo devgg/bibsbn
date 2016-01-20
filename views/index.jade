@@ -8,18 +8,20 @@ html(lang="en")
         link(rel='stylesheet', href='/style/bibsbn.css')
         script(src='/js/lib/require.js' data-main='/js/main' defer)
     body
-        div(id='main')
-            //BibSBN - ISBN to BibTeX converter
-            h1
-            div(id='input_container')
-                input(id='isbn_text'  type='text' size=23 maxlength=17 autofocus value='3625171570' class='text_incorrect')
-                button(id='isbn_button' form='isbn_text' class='button_disabled' disabled) Search
-            div
-                textarea(id='bibtex_text', rows=15 cols= 75 wrap='hard')
-            div(id='status_container')
-                div(id='status_google' class='status') Google Books
-                div(id='status_open_library' class='status') Open Library
-                div(id='status_worldcat' class='status')  WorldCat
+        header BibSBN - ISBN to BibTeX converter
+        div(id='main_container')
+            div(id='main')
+                h1
+                div(id='input_container')
+                    input(id='isbn_text'  type='text' size=23 maxlength=17 autofocus value='362517157' class='text_incorrect')
+                    button(id='isbn_button' form='isbn_text' class='button_disabled' disabled) Search
+                div
+                    textarea(id='bibtex_text', rows=15 cols= 75 wrap='hard')
+                div(id='status_container')
+                    div(id='status_google' class='status') Google Books
+                    div(id='status_open_library' class='status') Open Library
+                    div(id='status_worldcat' class='status')  WorldCat
+        footer &copy; 2016 Florian Gauger
 
 
 

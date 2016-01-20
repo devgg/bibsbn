@@ -1,0 +1,60 @@
+#isbn_button
+  -webkit-transition all 0.30s ease-in-out
+  -moz-transition all 0.30s ease-in-out
+  -ms-transition all 0.30s ease-in-out
+  -o-transition all 0.30s ease-in-out
+  flex 0.4
+  border-style solid
+  font-size medium
+  color white
+  border-width 1px
+  border-radius 0
+  background 0 0
+
+#isbn_button:disabled
+  border-color $white
+  color $white
+  cursor not-allowed
+
+#isbn_button:enabled
+  box-shadow: 0 0 7px $white
+  border-color white
+  background  white
+  cursor pointer
+  color color_gradient_right
+
+
+#isbn_button:hover:enabled
+  background 0 0
+  border-color white
+  color white
+
+#isbn_button:focus
+  outline 0
+
+
+#isbn_text
+  font-size medium
+
+input[type=text], textarea
+  -webkit-transition all 0.30s ease-in-out
+  -moz-transition all 0.30s ease-in-out
+  -ms-transition all 0.30s ease-in-out
+  -o-transition all 0.30s ease-in-out
+  outline none;
+  padding 5px 0 5px 3px
+  border-width 1px
+  border-style solid
+  background 0 0
+  color white
+  border-color white
+
+
+input[type=text]:focus, textarea:focus
+  box-shadow: 0 0 7px white
+
+#bibtex_text
+  resize none
+  margin 15px 0
+  font-size small
+  font-weight normal

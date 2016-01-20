@@ -1,26 +1,19 @@
-fallback_color = #7474BF
-
-@import 'status.styl'
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat)
-@import url(https://fonts.googleapis.com/css?family=Open\+Sans);
+@import url(https://fonts.googleapis.com/css?family=Open\+Sans)
+@import url(https://fonts.googleapis.com/css?family=Lato)
+@import url(https://fonts.googleapis.com/css?family=Jura);
+
+@import 'isbn.styl'
+@import 'status.styl'
 
 
-color = $olive
 
-
-palette1_red = #fbaea8
-palette1_green = #b8f5d2
-palette1_blue = #c1e0f5
-
-palette2_red = #D43F3F
-palette2_green = #6A9A1F
-palette2_blue = #00ACE9
 
 
 
 *
-  font-family 'Montserrat', sans-serif
+  font-family 'Jura', sans-serif
   margin 0
   padding 0
 
@@ -30,144 +23,45 @@ body
   height 100vh
   width 100vw
   display flex
+  flex-direction column
+  background color_gradient_right
+  background -webkit-linear-gradient(to left, color_gradient_right, color_gradient_left)
+  background linear-gradient(to left, color_gradient_right, color_gradient_left)
+
+
+
+
+
+header
+  height 80px
+  width 100%
+  //border-bottom-color white
+  border-bottom-style solid
+  border-bottom-width 1px
+  border-bottom-color rgba(255, 255, 255, 0.0980392)
+  line-height 80px
+  color white
+
+
+#main_container
+  display flex
   justify-content center
-  background 0
-  background: #c21500; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #c21500 , #ffc500); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #c21500 , #ffc500);
-
-
-  background: #a73737; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #a73737 , #7a2828); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #a73737 , #7a2828); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-
-  background: #f857a6; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #f857a6 , #ff5858); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #f857a6 , #ff5858); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-
-  background: #4b6cb7; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #4b6cb7 , #182848); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #4b6cb7 , #182848); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-
-  background: #e43a15; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #e43a15 , #e65245); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #e43a15 , #e65245); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-
-  background: #7474BF; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #7474BF , #348AC7); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #7474BF , #348AC7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-
+  height 100%
 
 #main
   align-self center
   background 0 0
 
-#bibtex_text
-  resize none
-  margin 15px 0
-  font-size medium
-  font-weight semi-bold
-  font-family 'Open Sans', sans-serif
-
 #input_container
   display flex
   justify-content space-between
-/*
-#isbn_text
-  font-size large*/
 
-/*
-#isbn_button:disabled
-  button-disabled()
-  //color grey
-
-#isbn_button:enabled
-  color color
-  //border-color color;*/
-
-form .field-error
-  field-error()
-
-#isbn_text
-  font-size large
-
-#isbn_button
-  -webkit-transition all 0.30s ease-in-out
-  -moz-transition all 0.30s ease-in-out
-  -ms-transition all 0.30s ease-in-out
-  -o-transition all 0.30s ease-in-out
-  flex 0.3
-  border-style solid
-  font-size large
+footer
+  align-self flex-end
+  //font-family 'Lato', sans-serif
   color white
-  border-width 1px
-  border-radius 0
-  background 0 0
+  font-weight light
+  font-size x-small
+  padding 5px 10px
 
-
-#isbn_button:disabled
-  border-color $white
-  color $white
-  cursor not-allowed
-
-#isbn_button:enabled
-  box-shadow: 0 0 7px $white
-  border-color white
-  background  white
-  cursor pointer
-  color fallback_color
-
-
-
-#isbn_button:hover:enabled
-  background 0 0
-  border-color white
-  color white
-
-#isbn_button:active
-  border-color palette2_green
-  color palette2_green
-
-
-
-
-
-
-
-
-#isbn_button:focus
-  outline 0
-
-input[type=text], textarea
-  -webkit-transition all 0.30s ease-in-out
-  -moz-transition all 0.30s ease-in-out
-  -ms-transition all 0.30s ease-in-out
-  -o-transition all 0.30s ease-in-out
-  outline none;
-  padding 5px 0 5px 3px
-  border-width 1px
-  border-style solid
-  background 0 0
-  color white
-  border-color white
-
-
-
-
-
-
-
-
-input[type=text]:focus, textarea:focus
-  box-shadow: 0 0 7px white
 

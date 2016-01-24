@@ -19,7 +19,7 @@
 #isbn_button:enabled
   box-shadow: 0 0 7px $white
   border-color white
-  background  white
+  background white
   cursor pointer
   color color_gradient_right
 
@@ -60,11 +60,17 @@ input[type=text]:focus, textarea:focus
   font-size small
   font-weight normal
 
+.input_spacer
+  flex 0.3
+
+.status_spacer
+  flex 0.05
+
 
 #main_container
+  align-self center
   display flex
-  justify-content center
-  height 500px
+  justify-content space-between
   flex-grow 1
 
 #main
